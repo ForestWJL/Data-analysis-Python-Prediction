@@ -1,3 +1,7 @@
+## 🖥️ Slides (PPTX)
+- View online (Office viewer): https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FForestWJL%2FData-analysis-Python-Prediction%2Fmain%2FPython_prediction.pptx
+- Direct download: [Python_prediction.pptx](Python_prediction.pptx)
+
 # Data-analysis-Python-Prediction
 
 This repo showcases a production-style Python ML pipeline for tabular prediction. leverage matplotlib, seaborn, pandas, numpy, plotly.express, scikit-learn to perform feature engineering (encoders, scaling, date/ratio features), model benchmarking (Linear/Tree/Ensemble), cross-validation & hyper-tuning, error analysis, SHAP explainability,
