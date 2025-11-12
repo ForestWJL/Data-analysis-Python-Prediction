@@ -1,32 +1,12 @@
-<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Python Prediction — Notebook & Slides</title>
-<style>
- body{font-family:system-ui;margin:0}
- header{padding:16px 20px;border-bottom:1px solid #eee}
- .tabs{display:flex;gap:8px;padding:12px 20px;border-bottom:1px solid #eee}
- .tabs button{padding:8px 12px;border:1px solid #ddd;background:#fff;border-radius:10px;cursor:pointer}
- .tabs button.active{background:#f6f6f6}
- .panel{display:none}
- .panel.active{display:block}
- iframe{width:100%;height:85vh;border:0}
-</style>
-<header>
-  <h1>HDB Resale Price Prediction (Python)</h1>
-  <div>Interactive notebook (nbviewer) & slides (Office viewer)</div>
-</header>
-<div class="tabs">
-  <button id="tab-nb" class="active">Notebook</button>
-  <button id="tab-ppt">Slides</button>
-</div>
-<div id="nb" class="panel active">
-  <iframe src="https://nbviewer.org/github/ForestWJL/Data-analysis-Python-Prediction/blob/main/Python_prediction.ipynb"></iframe>
-</div>
-<div id="ppt" class="panel">
-  <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FForestWJL%2FData-analysis-Python-Prediction%2Fmain%2FPython_prediction.pptx"></iframe>
-</div>
-<script>
-  const nb=document.getElementById('nb'), ppt=document.getElementById('ppt');
-  const bN=document.getElementById('tab-nb'), bP=document.getElementById('tab-ppt');
-  function show(w){const n=w==='nb';nb.classList.toggle('active',n);ppt.classList.toggle('active',!n);bN.classList.toggle('active',n);bP.classList.toggle('active',!n);}
-  bN.onclick=()=>show('nb'); bP.onclick=()=>show('ppt');
-</script>
+<!-- Slides -->
+<iframe
+  src="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FForestWJL%2FData-analysis-Python-Prediction%2Frefs%2Fheads%2Fmain%2FPython_prediction.pptx&wdOrigin=BROWSELINK"
+  width="100%" height="85vh" style="border:0" allowfullscreen>
+</iframe>
+
+<!-- Helpful fallback links -->
+<p style="margin:10px 0">
+  If the viewer doesn’t load:
+  <a target="_blank" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FForestWJL%2FData-analysis-Python-Prediction%2Frefs%2Fheads%2Fmain%2FPython_prediction.pptx&wdOrigin=BROWSELINK">Open in a new tab</a> ·
+  <a href="https://raw.githubusercontent.com/ForestWJL/Data-analysis-Python-Prediction/refs/heads/main/Python_prediction.pptx">Download PPTX</a>
+</p>
