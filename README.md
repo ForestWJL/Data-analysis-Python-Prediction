@@ -1,6 +1,6 @@
 # Data-analysis-Python-Prediction
 
-This repo showcases a production-style Python ML pipeline for tabular prediction. leverage matplotlib, seaborn, pandas, numpy, plotly.express, scikit-learn to perform feature engineering (encoders, scaling, date/ratio features), model benchmarking (Linear/Tree/Ensemble), cross-validation & hyper-tuning, error analysis, SHAP explainability,
+This repo showcases a production-style Python ML pipeline for tabular prediction. It leverages matplotlib, seaborn, pandas, numpy, plotly.express, and scikit-learn to perform feature engineering (encoders, scaling, date/ratio features), model benchmarking (Linear/Tree/Ensemble), cross-validation & hyper-parameter tuning, error analysis, and SHAP explainability.
 
 ## 🔗 Live showcase
 - **GitHub Pages (Notebook + Slides tabs):** https://forestwjl.github.io/Data-analysis-Python-Prediction/
@@ -18,10 +18,4 @@ This repo showcases a production-style Python ML pipeline for tabular prediction
 - *(Optional)* PDF fallback: [`Python_prediction.pdf`](Python_prediction.pdf)
 
 ## 🧱 Tech stack
-`python` · `pandas` · `numpy` · `matplotlib` · `seaborn` · `plotly.express` · `scikit-learn`
-
-
-# Data-analysis-Python-Prediction
-
-This repo showcases a production-style Python ML pipeline for tabular prediction. leverage matplotlib, seaborn, pandas, numpy, plotly.express, scikit-learn to perform feature engineering (encoders, scaling, date/ratio features), model benchmarking (Linear/Tree/Ensemble), cross-validation & hyper-tuning, error analysis, SHAP explainability,
-
+`python` · `pandas` · `numpy` · `matplotlib` · `seaborn` · `plotly.express` · `scikit-learn` · `shap`
