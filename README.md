@@ -1,6 +1,7 @@
 ## 🖥️ Slides (PPTX)
-- View online (Office viewer): https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FForestWJL%2FData-analysis-Python-Prediction%2Fmain%2FPython_prediction.pptx
-- Direct download: [Python_prediction.pptx](Python_prediction.pptx)
+- View online: https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FForestWJL%2FData-analysis-Python-Prediction%2Frefs%2Fheads%2Fmain%2FPython_prediction.pptx&wdOrigin=BROWSELINK
+- Direct download: [Python_prediction.pptx](https://raw.githubusercontent.com/ForestWJL/Data-analysis-Python-Prediction/refs/heads/main/Python_prediction.pptx)
+
 
 # Data-analysis-Python-Prediction
 
