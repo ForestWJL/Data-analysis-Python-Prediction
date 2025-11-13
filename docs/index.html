@@ -1,33 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>HDB Resale Price Prediction (Python)</title>
 <style>
-  html, body { height:100%; margin:0; }
-  header { padding:16px 20px; border-bottom:1px solid #eee; }
-  .tabs { display:flex; gap:8px; padding:12px 20px; border-bottom:1px solid #eee; }
-  .tabs button { padding:8px 12px; border:1px solid #ddd; background:#fff; border-radius:10px; cursor:pointer; }
-  .tabs button.active { background:#f6f6f6; }
-  .panel { display:none; }
-  .panel.active { display:block; }
-  /* Full-bleed viewer area */
-  iframe.viewer { width:100%; height:calc(100vh - 160px); border:0; display:block; }
-  @media (max-width: 640px) {
-    iframe.viewer { height:calc(100vh - 180px); }
-  }
+  :root { --pad:20px; }
+  * { box-sizing:border-box; }
+  html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;color:#111}
+  header{padding:16px var(--pad);border-bottom:1px solid #eee}
+  h1{font-size:clamp(22px,3vw,32px);margin:0 0 6px}
+  .subtitle{color:#666}
+
+  .tabs{display:flex;gap:10px;padding:12px var(--pad);border-bottom:1px solid #eee}
+  .tabs button{padding:8px 14px;border:1px solid #ddd;background:#fff;border-radius:10px;cursor:pointer}
+  .tabs button.active{background:#f6f6f6}
+  .panel{display:none}
+  .panel.active{display:block}
+  /* full-height viewers */
+  .viewer{width:100%;height:85vh;border:0;display:block}
+  .help{margin:10px var(--pad)}
+  @media (max-width:640px){ .viewer{height:80vh} }
 </style>
+</head>
+<body>
 
-<!-- before (nbviewer; can 503) -->
-<!-- <iframe src="https://nbviewer.org/github/ForestWJL/Data-analysis-Python-Prediction/blob/main/Python_prediction.ipynb"></iframe> -->
+<header>
+  <h1>HDB Resale Price Prediction (Python)</h1>
+  <div class="subtitle">Interactive notebook (HTML) &amp; slides (Office viewer)</div>
+</header>
 
-<!-- after (served from your own GitHub Pages; no rate limit) -->
-<iframe src="Python_prediction.html"
-        style="width:100%; height:85vh; border:0; display:block;"></iframe>
-<iframe class="viewer" src="Python_prediction.html"></iframe>
-<iframe class="viewer" src="https://view.officeapps.live.com/op/view.aspx?src=..."></iframe>
+<div class="tabs">
+  <button id="tab-nb" class="active">Notebook</button>
+  <button id="tab-ppt">Slides</button>
+</div>
 
+<!-- Notebook panel (served from your Pages → no rate limit) -->
+<div id="nb" class="panel active">
+  <iframe class="viewer" src="Python_prediction.html"></iframe>
+  <p class="help">
+    If the embed doesn’t load:
+    <a target="_blank" rel="noopener" href="Python_prediction.html">Open notebook (HTML)</a>
+    &middot;
+    <a target="_blank" rel="noopener" href="https://github.com/ForestWJL/Data-analysis-Python-Prediction/blob/main/Python_prediction.ipynb">View .ipynb on GitHub</a>
+  </p>
+</div>
 
+<!-- Slides panel (Office viewer) -->
+<div id="ppt" class="panel">
+  <iframe class="viewer"
+    src="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FForestWJL%2FData-analysis-Python-Prediction%2Frefs%2Fheads%2Fmain%2FPython_prediction.pptx&wdOrigin=BROWSELINK">
+  </iframe>
+  <p class="help">
+    If the viewer doesn’t load:
+    <a target="_blank" rel="noopener"
+       href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FForestWJL%2FData-analysis-Python-Prediction%2Frefs%2Fheads%2Fmain%2FPython_prediction.pptx&wdOrigin=BROWSELINK">Open in a new tab</a>
+    &middot;
+    <a href="https://raw.githubusercontent.com/ForestWJL/Data-analysis-Python-Prediction/refs/heads/main/Python_prediction.pptx">Download PPTX</a>
+  </p>
+</div>
 
-<p class="help">
-  If the embed doesn’t load:
-  <a target="_blank" rel="noopener" href="Python_prediction.html">Open notebook (HTML)</a>
-  ·
-  <a target="_blank" rel="noopener" href="https://github.com/ForestWJL/Data-analysis-Python-Prediction/blob/main/Python_prediction.ipynb">View .ipynb on GitHub</a>
-</p>
+<script>
+  const nb = document.getElementById('nb');
+  const ppt = document.getElementById('ppt');
+  const btnNb = document.getElementById('tab-nb');
+  const btnPpt = document.getElementById('tab-ppt');
 
+  function show(which){
+    const isNb = which === 'nb';
+    nb.classList.toggle('active', isNb);
+    ppt.classList.toggle('active', !isNb);
+    btnNb.classList.toggle('active', isNb);
+    btnPpt.classList.toggle('active', !isNb);
+  }
+  btnNb.onclick = () => show('nb');
+  btnPpt.onclick = () => show('ppt');
+</script>
+
+</body>
+</html>
