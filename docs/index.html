@@ -17,7 +17,6 @@
   .tabs button.active{background:#f6f6f6}
   .panel{display:none}
   .panel.active{display:block}
-  /* full-height viewers */
   .viewer{width:100%;height:85vh;border:0;display:block}
   .help{margin:10px var(--pad)}
   @media (max-width:640px){ .viewer{height:80vh} }
@@ -31,11 +30,11 @@
 </header>
 
 <div class="tabs">
-  <button id="tab-nb" class="active">Notebook</button>
-  <button id="tab-ppt">Slides</button>
+  <button id="tab-nb" class="active">📓 Notebook</button>
+  <button id="tab-ppt">📑 Slides</button>
 </div>
 
-<!-- Notebook panel (served from your Pages → no rate limit) -->
+<!-- Notebook panel (served from your Pages — no nbviewer) -->
 <div id="nb" class="panel active">
   <iframe class="viewer" src="Python_prediction.html"></iframe>
   <p class="help">
@@ -61,20 +60,19 @@
 </div>
 
 <script>
-  const nb = document.getElementById('nb');
+  const nb  = document.getElementById('nb');
   const ppt = document.getElementById('ppt');
-  const btnNb = document.getElementById('tab-nb');
-  const btnPpt = document.getElementById('tab-ppt');
-
+  const bNb = document.getElementById('tab-nb');
+  const bPt = document.getElementById('tab-ppt');
   function show(which){
-    const isNb = which === 'nb';
-    nb.classList.toggle('active', isNb);
-    ppt.classList.toggle('active', !isNb);
-    btnNb.classList.toggle('active', isNb);
-    btnPpt.classList.toggle('active', !isNb);
+    const showNb = which === 'nb';
+    nb.classList.toggle('active', showNb);
+    ppt.classList.toggle('active', !showNb);
+    bNb.classList.toggle('active', showNb);
+    bPt.classList.toggle('active', !showNb);
   }
-  btnNb.onclick = () => show('nb');
-  btnPpt.onclick = () => show('ppt');
+  bNb.onclick = () => show('nb');
+  bPt.onclick = () => show('ppt');
 </script>
 
 </body>
