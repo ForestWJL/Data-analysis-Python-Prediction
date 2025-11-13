@@ -4,6 +4,10 @@ This repo showcases a production-style Python ML pipeline for tabular prediction
 
 ## 🔗 Live showcase
 - **GitHub Pages (Notebook + Slides tabs):** https://forestwjl.github.io/Data-analysis-Python-Prediction/
+- ## 📓 Notebook
+- Live HTML (no rate limit): https://forestwjl.github.io/Data-analysis-Python-Prediction/Python_prediction.html
+- nbviewer (backup): https://nbviewer.org/github/ForestWJL/Data-analysis-Python-Prediction/blob/main/Python_prediction.ipynb
+
 
 ## 📓 Notebook
 - View on GitHub: [`Python_prediction.ipynb`](Python_prediction.ipynb)
